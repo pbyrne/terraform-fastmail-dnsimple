@@ -1,0 +1,621 @@
+2021-10-11T18:09:49.906-0500 [INFO]  Terraform version: 1.0.8
+2021-10-11T18:09:49.906-0500 [INFO]  Go runtime version: go1.17.1
+2021-10-11T18:09:49.906-0500 [INFO]  CLI args: []string{"/opt/homebrew/bin/terraform", "validate", "-no-color", "-json"}
+2021-10-11T18:09:49.906-0500 [TRACE] Stdout is not a terminal
+2021-10-11T18:09:49.906-0500 [TRACE] Stderr is not a terminal
+2021-10-11T18:09:49.906-0500 [TRACE] Stdin is not a terminal
+2021-10-11T18:09:49.906-0500 [DEBUG] Attempting to open CLI config file: /Users/patrickbyrne/.terraformrc
+2021-10-11T18:09:49.906-0500 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2021-10-11T18:09:49.906-0500 [INFO]  Loading CLI configuration from /Users/patrickbyrne/.terraform.d/credentials.tfrc.json
+2021-10-11T18:09:49.906-0500 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2021-10-11T18:09:49.906-0500 [DEBUG] ignoring non-existing provider search directory /Users/patrickbyrne/.terraform.d/plugins
+2021-10-11T18:09:49.906-0500 [DEBUG] ignoring non-existing provider search directory /Users/patrickbyrne/Library/Application Support/io.terraform/plugins
+2021-10-11T18:09:49.906-0500 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2021-10-11T18:09:49.906-0500 [INFO]  CLI command args: []string{"validate", "-no-color", "-json"}
+2021-10-11T18:09:49.907-0500 [TRACE] providercache.fillMetaCache: scanning directory .terraform/providers
+2021-10-11T18:09:49.907-0500 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/dnsimple/dnsimple v0.9.2 for darwin_arm64 at .terraform/providers/registry.terraform.io/dnsimple/dnsimple/0.9.2/darwin_arm64
+2021-10-11T18:09:49.907-0500 [TRACE] providercache.fillMetaCache: including .terraform/providers/registry.terraform.io/dnsimple/dnsimple/0.9.2/darwin_arm64 as a candidate package for registry.terraform.io/dnsimple/dnsimple 0.9.2
+2021-10-11T18:09:49.915-0500 [DEBUG] checking for provisioner in "."
+2021-10-11T18:09:49.917-0500 [DEBUG] checking for provisioner in "/opt/homebrew/bin"
+2021-10-11T18:09:49.918-0500 [INFO]  Failed to read plugin lock file .terraform/plugins/darwin_arm64/lock.json: open .terraform/plugins/darwin_arm64/lock.json: no such file or directory
+2021-10-11T18:09:49.918-0500 [TRACE] terraform.NewContext: starting
+2021-10-11T18:09:49.918-0500 [TRACE] terraform.NewContext: loading provider schemas
+2021-10-11T18:09:49.918-0500 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/dnsimple/dnsimple"
+2021-10-11T18:09:49.918-0500 [DEBUG] created provider logger: level=off
+2021-10-11T18:09:49.918-0500 [INFO]  provider: configuring client automatic mTLS
+2021-10-11T18:09:49.925-0500 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/dnsimple/dnsimple/0.9.2/darwin_arm64/terraform-provider-dnsimple_v0.9.2 args=[.terraform/providers/registry.terraform.io/dnsimple/dnsimple/0.9.2/darwin_arm64/terraform-provider-dnsimple_v0.9.2]
+2021-10-11T18:09:49.926-0500 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/dnsimple/dnsimple/0.9.2/darwin_arm64/terraform-provider-dnsimple_v0.9.2 pid=9564
+2021-10-11T18:09:49.926-0500 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/dnsimple/dnsimple/0.9.2/darwin_arm64/terraform-provider-dnsimple_v0.9.2
+2021-10-11T18:09:49.933-0500 [INFO]  provider.terraform-provider-dnsimple_v0.9.2: configuring server automatic mTLS: timestamp=2021-10-11T18:09:49.933-0500
+2021-10-11T18:09:49.954-0500 [DEBUG] provider: using plugin: version=5
+2021-10-11T18:09:49.954-0500 [DEBUG] provider.terraform-provider-dnsimple_v0.9.2: plugin address: address=/var/folders/9c/wxcjx8894v5dn26rskylqlxw0000gn/T/plugin926922651 network=unix timestamp=2021-10-11T18:09:49.954-0500
+2021-10-11T18:09:49.973-0500 [TRACE] GRPCProvider: GetProviderSchema
+2021-10-11T18:09:49.973-0500 [TRACE] provider.stdio: waiting for stdio data
+2021-10-11T18:09:49.973-0500 [TRACE] GRPCProvider: Close
+2021-10-11T18:09:49.974-0500 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-10-11T18:09:49.974-0500 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/dnsimple/dnsimple/0.9.2/darwin_arm64/terraform-provider-dnsimple_v0.9.2 pid=9564
+2021-10-11T18:09:49.974-0500 [DEBUG] provider: plugin exited
+2021-10-11T18:09:49.974-0500 [TRACE] terraform.NewContext: complete
+2021-10-11T18:09:49.974-0500 [INFO]  terraform: building graph: GraphTypeValidate
+2021-10-11T18:09:49.974-0500 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2021-10-11T18:09:49.974-0500 [TRACE] ConfigTransformer: Starting for path:
+2021-10-11T18:09:49.974-0500 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  dnsimple_zone_record.apex-primary - *terraform.NodeValidatableResource
+  dnsimple_zone_record.apex-secondary - *terraform.NodeValidatableResource
+  dnsimple_zone_record.apex-spf - *terraform.NodeValidatableResource
+  dnsimple_zone_record.dkim-1 - *terraform.NodeValidatableResource
+  dnsimple_zone_record.dkim-2 - *terraform.NodeValidatableResource
+  dnsimple_zone_record.dkim-3 - *terraform.NodeValidatableResource
+  dnsimple_zone_record.wildcard-primary - *terraform.NodeValidatableResource
+  dnsimple_zone_record.wildcard-secondary - *terraform.NodeValidatableResource
+  dnsimple_zone_record.wildcard-spf - *terraform.NodeValidatableResource
+  ------
+2021-10-11T18:09:49.974-0500 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2021-10-11T18:09:49.974-0500 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  dnsimple_zone_record.apex-primary - *terraform.NodeValidatableResource
+  dnsimple_zone_record.apex-secondary - *terraform.NodeValidatableResource
+  dnsimple_zone_record.apex-spf - *terraform.NodeValidatableResource
+  dnsimple_zone_record.dkim-1 - *terraform.NodeValidatableResource
+  dnsimple_zone_record.dkim-2 - *terraform.NodeValidatableResource
+  dnsimple_zone_record.dkim-3 - *terraform.NodeValidatableResource
+  dnsimple_zone_record.wildcard-primary - *terraform.NodeValidatableResource
+  dnsimple_zone_record.wildcard-secondary - *terraform.NodeValidatableResource
+  dnsimple_zone_record.wildcard-spf - *terraform.NodeValidatableResource
+  var.apex - *terraform.NodeRootVariable
+  var.primary - *terraform.NodeRootVariable
+  var.secondary - *terraform.NodeRootVariable
+  var.spf - *terraform.NodeRootVariable
+  ------
+2021-10-11T18:09:49.974-0500 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2021-10-11T18:09:49.974-0500 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2021-10-11T18:09:49.974-0500 [TRACE] Executing graph transform *terraform.LocalTransformer
+2021-10-11T18:09:49.974-0500 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2021-10-11T18:09:49.974-0500 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021-10-11T18:09:49.974-0500 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2021-10-11T18:09:49.974-0500 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2021-10-11T18:09:49.975-0500 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2021-10-11T18:09:49.975-0500 [TRACE] Executing graph transform *terraform.StateTransformer
+2021-10-11T18:09:49.975-0500 [TRACE] StateTransformer: state is empty, so nothing to do
+2021-10-11T18:09:49.975-0500 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2021-10-11T18:09:49.975-0500 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021-10-11T18:09:49.975-0500 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021-10-11T18:09:49.975-0500 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2021-10-11T18:09:49.975-0500 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2021-10-11T18:09:49.975-0500 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021-10-11T18:09:49.975-0500 [TRACE] AttachResourceConfigTransformer: attaching to "dnsimple_zone_record.wildcard-primary" (*terraform.NodeValidatableResource) config from main.tf:24,1-51
+2021-10-11T18:09:49.975-0500 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to dnsimple_zone_record.wildcard-primary
+2021-10-11T18:09:49.975-0500 [TRACE] AttachResourceConfigTransformer: attaching to "dnsimple_zone_record.dkim-1" (*terraform.NodeValidatableResource) config from main.tf:47,1-41
+2021-10-11T18:09:49.975-0500 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to dnsimple_zone_record.dkim-1
+2021-10-11T18:09:49.975-0500 [TRACE] AttachResourceConfigTransformer: attaching to "dnsimple_zone_record.dkim-2" (*terraform.NodeValidatableResource) config from main.tf:54,1-41
+2021-10-11T18:09:49.975-0500 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to dnsimple_zone_record.dkim-2
+2021-10-11T18:09:49.975-0500 [TRACE] AttachResourceConfigTransformer: attaching to "dnsimple_zone_record.apex-secondary" (*terraform.NodeValidatableResource) config from main.tf:9,1-49
+2021-10-11T18:09:49.975-0500 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to dnsimple_zone_record.apex-secondary
+2021-10-11T18:09:49.975-0500 [TRACE] AttachResourceConfigTransformer: attaching to "dnsimple_zone_record.wildcard-secondary" (*terraform.NodeValidatableResource) config from main.tf:32,1-53
+2021-10-11T18:09:49.975-0500 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to dnsimple_zone_record.wildcard-secondary
+2021-10-11T18:09:49.975-0500 [TRACE] AttachResourceConfigTransformer: attaching to "dnsimple_zone_record.wildcard-spf" (*terraform.NodeValidatableResource) config from main.tf:40,1-47
+2021-10-11T18:09:49.975-0500 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to dnsimple_zone_record.wildcard-spf
+2021-10-11T18:09:49.975-0500 [TRACE] AttachResourceConfigTransformer: attaching to "dnsimple_zone_record.apex-primary" (*terraform.NodeValidatableResource) config from main.tf:1,1-47
+2021-10-11T18:09:49.975-0500 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to dnsimple_zone_record.apex-primary
+2021-10-11T18:09:49.975-0500 [TRACE] AttachResourceConfigTransformer: attaching to "dnsimple_zone_record.apex-spf" (*terraform.NodeValidatableResource) config from main.tf:17,1-43
+2021-10-11T18:09:49.975-0500 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to dnsimple_zone_record.apex-spf
+2021-10-11T18:09:49.975-0500 [TRACE] AttachResourceConfigTransformer: attaching to "dnsimple_zone_record.dkim-3" (*terraform.NodeValidatableResource) config from main.tf:61,1-41
+2021-10-11T18:09:49.975-0500 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to dnsimple_zone_record.dkim-3
+2021-10-11T18:09:49.975-0500 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021-10-11T18:09:49.975-0500 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021-10-11T18:09:49.975-0500 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021-10-11T18:09:49.975-0500 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  dnsimple_zone_record.apex-primary - *terraform.NodeValidatableResource
+  dnsimple_zone_record.apex-secondary - *terraform.NodeValidatableResource
+  dnsimple_zone_record.apex-spf - *terraform.NodeValidatableResource
+  dnsimple_zone_record.dkim-1 - *terraform.NodeValidatableResource
+  dnsimple_zone_record.dkim-2 - *terraform.NodeValidatableResource
+  dnsimple_zone_record.dkim-3 - *terraform.NodeValidatableResource
+  dnsimple_zone_record.wildcard-primary - *terraform.NodeValidatableResource
+  dnsimple_zone_record.wildcard-secondary - *terraform.NodeValidatableResource
+  dnsimple_zone_record.wildcard-spf - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  var.apex - *terraform.NodeRootVariable
+  var.primary - *terraform.NodeRootVariable
+  var.secondary - *terraform.NodeRootVariable
+  var.spf - *terraform.NodeRootVariable
+  ------
+2021-10-11T18:09:49.975-0500 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021-10-11T18:09:49.975-0500 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021-10-11T18:09:49.975-0500 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021-10-11T18:09:49.975-0500 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/dnsimple/dnsimple"] serving dnsimple_zone_record.wildcard-secondary
+2021-10-11T18:09:49.975-0500 [DEBUG] ProviderTransformer: "dnsimple_zone_record.wildcard-secondary" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/dnsimple/dnsimple"]
+2021-10-11T18:09:49.975-0500 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/dnsimple/dnsimple"] serving dnsimple_zone_record.apex-primary
+2021-10-11T18:09:49.975-0500 [DEBUG] ProviderTransformer: "dnsimple_zone_record.apex-primary" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/dnsimple/dnsimple"]
+2021-10-11T18:09:49.975-0500 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/dnsimple/dnsimple"] serving dnsimple_zone_record.apex-spf
+2021-10-11T18:09:49.975-0500 [DEBUG] ProviderTransformer: "dnsimple_zone_record.apex-spf" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/dnsimple/dnsimple"]
+2021-10-11T18:09:49.975-0500 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/dnsimple/dnsimple"] serving dnsimple_zone_record.wildcard-primary
+2021-10-11T18:09:49.975-0500 [DEBUG] ProviderTransformer: "dnsimple_zone_record.wildcard-primary" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/dnsimple/dnsimple"]
+2021-10-11T18:09:49.975-0500 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/dnsimple/dnsimple"] serving dnsimple_zone_record.dkim-1
+2021-10-11T18:09:49.975-0500 [DEBUG] ProviderTransformer: "dnsimple_zone_record.dkim-1" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/dnsimple/dnsimple"]
+2021-10-11T18:09:49.975-0500 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/dnsimple/dnsimple"] serving dnsimple_zone_record.dkim-3
+2021-10-11T18:09:49.975-0500 [DEBUG] ProviderTransformer: "dnsimple_zone_record.dkim-3" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/dnsimple/dnsimple"]
+2021-10-11T18:09:49.975-0500 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/dnsimple/dnsimple"] serving dnsimple_zone_record.dkim-2
+2021-10-11T18:09:49.975-0500 [DEBUG] ProviderTransformer: "dnsimple_zone_record.dkim-2" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/dnsimple/dnsimple"]
+2021-10-11T18:09:49.975-0500 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/dnsimple/dnsimple"] serving dnsimple_zone_record.apex-secondary
+2021-10-11T18:09:49.975-0500 [DEBUG] ProviderTransformer: "dnsimple_zone_record.apex-secondary" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/dnsimple/dnsimple"]
+2021-10-11T18:09:49.975-0500 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/dnsimple/dnsimple"] serving dnsimple_zone_record.wildcard-spf
+2021-10-11T18:09:49.975-0500 [DEBUG] ProviderTransformer: "dnsimple_zone_record.wildcard-spf" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/dnsimple/dnsimple"]
+2021-10-11T18:09:49.975-0500 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  dnsimple_zone_record.apex-primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  dnsimple_zone_record.apex-secondary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  dnsimple_zone_record.apex-spf - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  dnsimple_zone_record.dkim-1 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  dnsimple_zone_record.dkim-2 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  dnsimple_zone_record.dkim-3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  dnsimple_zone_record.wildcard-primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  dnsimple_zone_record.wildcard-secondary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  dnsimple_zone_record.wildcard-spf - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  var.apex - *terraform.NodeRootVariable
+  var.primary - *terraform.NodeRootVariable
+  var.secondary - *terraform.NodeRootVariable
+  var.spf - *terraform.NodeRootVariable
+  ------
+2021-10-11T18:09:49.975-0500 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021-10-11T18:09:49.975-0500 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2021-10-11T18:09:49.975-0500 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  dnsimple_zone_record.apex-primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  dnsimple_zone_record.apex-secondary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  dnsimple_zone_record.apex-spf - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  dnsimple_zone_record.dkim-1 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  dnsimple_zone_record.dkim-2 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  dnsimple_zone_record.dkim-3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  dnsimple_zone_record.wildcard-primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  dnsimple_zone_record.wildcard-secondary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  dnsimple_zone_record.wildcard-spf - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  var.apex - *terraform.NodeRootVariable
+  var.primary - *terraform.NodeRootVariable
+  var.secondary - *terraform.NodeRootVariable
+  var.spf - *terraform.NodeRootVariable
+  ------
+2021-10-11T18:09:49.975-0500 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2021-10-11T18:09:49.975-0500 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2021-10-11T18:09:49.975-0500 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2021-10-11T18:09:49.975-0500 [TRACE] AttachSchemaTransformer: attaching resource schema to dnsimple_zone_record.dkim-2
+2021-10-11T18:09:49.975-0500 [TRACE] AttachSchemaTransformer: attaching resource schema to dnsimple_zone_record.apex-secondary
+2021-10-11T18:09:49.975-0500 [TRACE] AttachSchemaTransformer: attaching resource schema to dnsimple_zone_record.wildcard-secondary
+2021-10-11T18:09:49.975-0500 [TRACE] AttachSchemaTransformer: attaching resource schema to dnsimple_zone_record.apex-primary
+2021-10-11T18:09:49.975-0500 [TRACE] AttachSchemaTransformer: attaching resource schema to dnsimple_zone_record.apex-spf
+2021-10-11T18:09:49.975-0500 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/dnsimple/dnsimple"]
+2021-10-11T18:09:49.975-0500 [TRACE] AttachSchemaTransformer: attaching resource schema to dnsimple_zone_record.wildcard-primary
+2021-10-11T18:09:49.975-0500 [TRACE] AttachSchemaTransformer: attaching resource schema to dnsimple_zone_record.dkim-1
+2021-10-11T18:09:49.975-0500 [TRACE] AttachSchemaTransformer: attaching resource schema to dnsimple_zone_record.wildcard-spf
+2021-10-11T18:09:49.975-0500 [TRACE] AttachSchemaTransformer: attaching resource schema to dnsimple_zone_record.dkim-3
+2021-10-11T18:09:49.975-0500 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2021-10-11T18:09:49.975-0500 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2021-10-11T18:09:49.975-0500 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2021-10-11T18:09:49.975-0500 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021-10-11T18:09:49.975-0500 [DEBUG] ReferenceTransformer: "var.spf" references: []
+2021-10-11T18:09:49.975-0500 [DEBUG] ReferenceTransformer: "dnsimple_zone_record.wildcard-spf" references: [var.spf var.apex]
+2021-10-11T18:09:49.975-0500 [DEBUG] ReferenceTransformer: "dnsimple_zone_record.dkim-3" references: [var.apex var.apex]
+2021-10-11T18:09:49.975-0500 [DEBUG] ReferenceTransformer: "var.secondary" references: []
+2021-10-11T18:09:49.975-0500 [DEBUG] ReferenceTransformer: "dnsimple_zone_record.dkim-2" references: [var.apex var.apex]
+2021-10-11T18:09:49.975-0500 [DEBUG] ReferenceTransformer: "var.apex" references: []
+2021-10-11T18:09:49.975-0500 [DEBUG] ReferenceTransformer: "dnsimple_zone_record.apex-spf" references: [var.apex var.spf]
+2021-10-11T18:09:49.975-0500 [DEBUG] ReferenceTransformer: "var.primary" references: []
+2021-10-11T18:09:49.975-0500 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/dnsimple/dnsimple\"]" references: []
+2021-10-11T18:09:49.975-0500 [DEBUG] ReferenceTransformer: "dnsimple_zone_record.apex-secondary" references: [var.secondary var.apex]
+2021-10-11T18:09:49.975-0500 [DEBUG] ReferenceTransformer: "dnsimple_zone_record.wildcard-secondary" references: [var.secondary var.apex]
+2021-10-11T18:09:49.975-0500 [DEBUG] ReferenceTransformer: "dnsimple_zone_record.apex-primary" references: [var.primary var.apex]
+2021-10-11T18:09:49.976-0500 [DEBUG] ReferenceTransformer: "dnsimple_zone_record.wildcard-primary" references: [var.primary var.apex]
+2021-10-11T18:09:49.976-0500 [DEBUG] ReferenceTransformer: "dnsimple_zone_record.dkim-1" references: [var.apex var.apex]
+2021-10-11T18:09:49.976-0500 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  dnsimple_zone_record.apex-primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.primary - *terraform.NodeRootVariable
+  dnsimple_zone_record.apex-secondary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.secondary - *terraform.NodeRootVariable
+  dnsimple_zone_record.apex-spf - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.spf - *terraform.NodeRootVariable
+  dnsimple_zone_record.dkim-1 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+  dnsimple_zone_record.dkim-2 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+  dnsimple_zone_record.dkim-3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+  dnsimple_zone_record.wildcard-primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.primary - *terraform.NodeRootVariable
+  dnsimple_zone_record.wildcard-secondary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.secondary - *terraform.NodeRootVariable
+  dnsimple_zone_record.wildcard-spf - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.spf - *terraform.NodeRootVariable
+  provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  var.apex - *terraform.NodeRootVariable
+  var.primary - *terraform.NodeRootVariable
+  var.secondary - *terraform.NodeRootVariable
+  var.spf - *terraform.NodeRootVariable
+  ------
+2021-10-11T18:09:49.976-0500 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2021-10-11T18:09:49.976-0500 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2021-10-11T18:09:49.976-0500 [TRACE] Executing graph transform *terraform.attachDataResourceDependsOnTransformer
+2021-10-11T18:09:49.976-0500 [TRACE] Completed graph transform *terraform.attachDataResourceDependsOnTransformer (no changes)
+2021-10-11T18:09:49.976-0500 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021-10-11T18:09:49.976-0500 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021-10-11T18:09:49.976-0500 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2021-10-11T18:09:49.976-0500 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2021-10-11T18:09:49.976-0500 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2021-10-11T18:09:49.976-0500 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  dnsimple_zone_record.apex-primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.primary - *terraform.NodeRootVariable
+  dnsimple_zone_record.apex-secondary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.secondary - *terraform.NodeRootVariable
+  dnsimple_zone_record.apex-spf - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.spf - *terraform.NodeRootVariable
+  dnsimple_zone_record.dkim-1 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+  dnsimple_zone_record.dkim-2 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+  dnsimple_zone_record.dkim-3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+  dnsimple_zone_record.wildcard-primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.primary - *terraform.NodeRootVariable
+  dnsimple_zone_record.wildcard-secondary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.secondary - *terraform.NodeRootVariable
+  dnsimple_zone_record.wildcard-spf - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.spf - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    dnsimple_zone_record.apex-primary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.apex-secondary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.apex-spf - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-1 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-2 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-3 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-primary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-secondary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-spf - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.primary - *terraform.NodeRootVariable
+    var.secondary - *terraform.NodeRootVariable
+    var.spf - *terraform.NodeRootVariable
+  provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  var.apex - *terraform.NodeRootVariable
+  var.primary - *terraform.NodeRootVariable
+  var.secondary - *terraform.NodeRootVariable
+  var.spf - *terraform.NodeRootVariable
+  ------
+2021-10-11T18:09:49.976-0500 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021-10-11T18:09:49.976-0500 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  dnsimple_zone_record.apex-primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.primary - *terraform.NodeRootVariable
+  dnsimple_zone_record.apex-secondary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.secondary - *terraform.NodeRootVariable
+  dnsimple_zone_record.apex-spf - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.spf - *terraform.NodeRootVariable
+  dnsimple_zone_record.dkim-1 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+  dnsimple_zone_record.dkim-2 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+  dnsimple_zone_record.dkim-3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+  dnsimple_zone_record.wildcard-primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.primary - *terraform.NodeRootVariable
+  dnsimple_zone_record.wildcard-secondary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.secondary - *terraform.NodeRootVariable
+  dnsimple_zone_record.wildcard-spf - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.spf - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    dnsimple_zone_record.apex-primary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.apex-secondary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.apex-spf - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-1 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-2 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-3 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-primary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-secondary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-spf - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.primary - *terraform.NodeRootVariable
+    var.secondary - *terraform.NodeRootVariable
+    var.spf - *terraform.NodeRootVariable
+  provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/dnsimple/dnsimple"] (close) - *terraform.graphNodeCloseProvider
+    dnsimple_zone_record.apex-primary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.apex-secondary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.apex-spf - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-1 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-2 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-3 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-primary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-secondary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-spf - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  var.apex - *terraform.NodeRootVariable
+  var.primary - *terraform.NodeRootVariable
+  var.secondary - *terraform.NodeRootVariable
+  var.spf - *terraform.NodeRootVariable
+  ------
+2021-10-11T18:09:49.976-0500 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021-10-11T18:09:49.976-0500 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  dnsimple_zone_record.apex-primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.primary - *terraform.NodeRootVariable
+  dnsimple_zone_record.apex-secondary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.secondary - *terraform.NodeRootVariable
+  dnsimple_zone_record.apex-spf - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.spf - *terraform.NodeRootVariable
+  dnsimple_zone_record.dkim-1 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+  dnsimple_zone_record.dkim-2 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+  dnsimple_zone_record.dkim-3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+  dnsimple_zone_record.wildcard-primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.primary - *terraform.NodeRootVariable
+  dnsimple_zone_record.wildcard-secondary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.secondary - *terraform.NodeRootVariable
+  dnsimple_zone_record.wildcard-spf - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.spf - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    dnsimple_zone_record.apex-primary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.apex-secondary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.apex-spf - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-1 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-2 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-3 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-primary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-secondary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-spf - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.primary - *terraform.NodeRootVariable
+    var.secondary - *terraform.NodeRootVariable
+    var.spf - *terraform.NodeRootVariable
+  provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/dnsimple/dnsimple"] (close) - *terraform.graphNodeCloseProvider
+    dnsimple_zone_record.apex-primary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.apex-secondary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.apex-spf - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-1 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-2 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-3 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-primary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-secondary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-spf - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/dnsimple/dnsimple"] (close) - *terraform.graphNodeCloseProvider
+  var.apex - *terraform.NodeRootVariable
+  var.primary - *terraform.NodeRootVariable
+  var.secondary - *terraform.NodeRootVariable
+  var.spf - *terraform.NodeRootVariable
+  ------
+2021-10-11T18:09:49.976-0500 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021-10-11T18:09:49.976-0500 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  dnsimple_zone_record.apex-primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.primary - *terraform.NodeRootVariable
+  dnsimple_zone_record.apex-secondary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.secondary - *terraform.NodeRootVariable
+  dnsimple_zone_record.apex-spf - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.spf - *terraform.NodeRootVariable
+  dnsimple_zone_record.dkim-1 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+  dnsimple_zone_record.dkim-2 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+  dnsimple_zone_record.dkim-3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+  dnsimple_zone_record.wildcard-primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.primary - *terraform.NodeRootVariable
+  dnsimple_zone_record.wildcard-secondary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.secondary - *terraform.NodeRootVariable
+  dnsimple_zone_record.wildcard-spf - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+    var.apex - *terraform.NodeRootVariable
+    var.spf - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    dnsimple_zone_record.apex-primary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.apex-secondary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.apex-spf - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-1 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-2 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-3 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-primary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-secondary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-spf - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/dnsimple/dnsimple"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/dnsimple/dnsimple"] (close) - *terraform.graphNodeCloseProvider
+    dnsimple_zone_record.apex-primary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.apex-secondary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.apex-spf - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-1 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-2 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.dkim-3 - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-primary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-secondary - *terraform.NodeValidatableResource
+    dnsimple_zone_record.wildcard-spf - *terraform.NodeValidatableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/dnsimple/dnsimple"] (close) - *terraform.graphNodeCloseProvider
+  var.apex - *terraform.NodeRootVariable
+  var.primary - *terraform.NodeRootVariable
+  var.secondary - *terraform.NodeRootVariable
+  var.spf - *terraform.NodeRootVariable
+  ------
+2021-10-11T18:09:49.976-0500 [DEBUG] Starting graph walk: walkValidate
+2021-10-11T18:09:49.976-0500 [TRACE] vertex "var.apex": starting visit (*terraform.NodeRootVariable)
+2021-10-11T18:09:49.976-0500 [TRACE] vertex "var.apex": visit complete
+2021-10-11T18:09:49.976-0500 [TRACE] vertex "var.spf": starting visit (*terraform.NodeRootVariable)
+2021-10-11T18:09:49.976-0500 [TRACE] vertex "var.secondary": starting visit (*terraform.NodeRootVariable)
+2021-10-11T18:09:49.976-0500 [TRACE] vertex "var.secondary": visit complete
+2021-10-11T18:09:49.976-0500 [TRACE] vertex "var.spf": visit complete
+2021-10-11T18:09:49.976-0500 [TRACE] vertex "var.primary": starting visit (*terraform.NodeRootVariable)
+2021-10-11T18:09:49.976-0500 [TRACE] vertex "var.primary": visit complete
+2021-10-11T18:09:49.976-0500 [TRACE] vertex "provider[\"registry.terraform.io/dnsimple/dnsimple\"]": starting visit (*terraform.NodeApplyableProvider)
+2021-10-11T18:09:49.976-0500 [DEBUG] created provider logger: level=off
+2021-10-11T18:09:49.976-0500 [INFO]  provider: configuring client automatic mTLS
+2021-10-11T18:09:49.983-0500 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/dnsimple/dnsimple/0.9.2/darwin_arm64/terraform-provider-dnsimple_v0.9.2 args=[.terraform/providers/registry.terraform.io/dnsimple/dnsimple/0.9.2/darwin_arm64/terraform-provider-dnsimple_v0.9.2]
+2021-10-11T18:09:49.984-0500 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/dnsimple/dnsimple/0.9.2/darwin_arm64/terraform-provider-dnsimple_v0.9.2 pid=9565
+2021-10-11T18:09:49.984-0500 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/dnsimple/dnsimple/0.9.2/darwin_arm64/terraform-provider-dnsimple_v0.9.2
+2021-10-11T18:09:49.991-0500 [INFO]  provider.terraform-provider-dnsimple_v0.9.2: configuring server automatic mTLS: timestamp=2021-10-11T18:09:49.991-0500
+2021-10-11T18:09:50.013-0500 [DEBUG] provider: using plugin: version=5
+2021-10-11T18:09:50.013-0500 [DEBUG] provider.terraform-provider-dnsimple_v0.9.2: plugin address: address=/var/folders/9c/wxcjx8894v5dn26rskylqlxw0000gn/T/plugin862982840 network=unix timestamp=2021-10-11T18:09:50.013-0500
+2021-10-11T18:09:50.014-0500 [WARN]  provider.stdio: stdio service not available, stdout/stderr syncing unavailable
+2021-10-11T18:09:50.014-0500 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/dnsimple/dnsimple\"]" provider for provider["registry.terraform.io/dnsimple/dnsimple"]
+2021-10-11T18:09:50.014-0500 [WARN]  provider.stdio: stdio service unavailable, run will do nothing
+2021-10-11T18:09:50.014-0500 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/dnsimple/dnsimple/0.9.2/darwin_arm64/terraform-provider-dnsimple_v0.9.2 pid=9565 error="signal: terminated"
+2021-10-11T18:09:50.014-0500 [TRACE] buildProviderConfig for provider["registry.terraform.io/dnsimple/dnsimple"]: no configuration at all
+2021-10-11T18:09:50.014-0500 [TRACE] vertex "provider[\"registry.terraform.io/dnsimple/dnsimple\"]": visit complete
+2021-10-11T18:09:50.014-0500 [TRACE] vertex "dnsimple_zone_record.dkim-1": starting visit (*terraform.NodeValidatableResource)
+2021-10-11T18:09:50.014-0500 [TRACE] vertex "dnsimple_zone_record.apex-spf": starting visit (*terraform.NodeValidatableResource)
+2021-10-11T18:09:50.014-0500 [TRACE] vertex "dnsimple_zone_record.wildcard-secondary": starting visit (*terraform.NodeValidatableResource)
+2021-10-11T18:09:50.014-0500 [TRACE] vertex "dnsimple_zone_record.dkim-2": starting visit (*terraform.NodeValidatableResource)
+2021-10-11T18:09:50.014-0500 [TRACE] vertex "dnsimple_zone_record.wildcard-primary": starting visit (*terraform.NodeValidatableResource)
+2021-10-11T18:09:50.014-0500 [TRACE] vertex "dnsimple_zone_record.apex-primary": starting visit (*terraform.NodeValidatableResource)
+2021-10-11T18:09:50.014-0500 [TRACE] vertex "dnsimple_zone_record.dkim-3": starting visit (*terraform.NodeValidatableResource)
+2021-10-11T18:09:50.014-0500 [TRACE] vertex "dnsimple_zone_record.wildcard-spf": starting visit (*terraform.NodeValidatableResource)
+2021-10-11T18:09:50.014-0500 [TRACE] vertex "dnsimple_zone_record.apex-secondary": starting visit (*terraform.NodeValidatableResource)
+2021-10-11T18:09:50.014-0500 [TRACE] GRPCProvider: ValidateResourceConfig
+2021-10-11T18:09:50.014-0500 [TRACE] GRPCProvider: GetProviderSchema
+2021-10-11T18:09:50.014-0500 [TRACE] GRPCProvider: ValidateResourceConfig
+2021-10-11T18:09:50.014-0500 [TRACE] GRPCProvider: ValidateResourceConfig
+2021-10-11T18:09:50.014-0500 [TRACE] GRPCProvider: ValidateResourceConfig
+2021-10-11T18:09:50.014-0500 [TRACE] GRPCProvider: ValidateResourceConfig
+2021-10-11T18:09:50.014-0500 [TRACE] GRPCProvider: ValidateResourceConfig
+2021-10-11T18:09:50.014-0500 [TRACE] GRPCProvider: ValidateResourceConfig
+2021-10-11T18:09:50.014-0500 [TRACE] GRPCProvider: ValidateResourceConfig
+2021-10-11T18:09:50.014-0500 [TRACE] GRPCProvider: ValidateResourceConfig
+2021-10-11T18:09:50.015-0500 [ERROR] plugin.(*GRPCProvider).GetProviderSchema: error="rpc error: code = Canceled desc = context canceled"
+2021-10-11T18:09:50.015-0500 [TRACE] vertex "dnsimple_zone_record.apex-spf": visit complete
+2021-10-11T18:09:50.015-0500 [TRACE] GRPCProvider: GetProviderSchema
+2021-10-11T18:09:50.015-0500 [ERROR] plugin.(*GRPCProvider).GetProviderSchema: error="rpc error: code = Canceled desc = context canceled"
+2021-10-11T18:09:50.015-0500 [TRACE] vertex "dnsimple_zone_record.dkim-1": visit complete
+
+panic: Request cancelled: The plugin.(*GRPCProvider).GetProviderSchema request was cancelled.
+
+goroutine 66 [running]:
+github.com/hashicorp/terraform/internal/plugin.(*GRPCProvider).getSchema(0x14000998580)
+	github.com/hashicorp/terraform/internal/plugin/grpc_provider.go:83 +0x234
+github.com/hashicorp/terraform/internal/plugin.(*GRPCProvider).getResourceSchema(0x14000998580, {0x140000c4180, 0x14})
+	github.com/hashicorp/terraform/internal/plugin/grpc_provider.go:92 +0x28
+github.com/hashicorp/terraform/internal/plugin.(*GRPCProvider).ValidateResourceConfig(0x14000998580, {{0x140000c4180, 0x14}, {{{0x106def858, 0x1400092a080}}, {0x106a284c0, 0x14000926420}}})
+	github.com/hashicorp/terraform/internal/plugin/grpc_provider.go:204 +0x70
+github.com/hashicorp/terraform/internal/terraform.(*NodeValidatableResource).validateResource(0x140006ac640, {0x106e4f2c0, 0x140009a0620})
+	github.com/hashicorp/terraform/internal/terraform/node_resource_validate.go:397 +0x15ac
+github.com/hashicorp/terraform/internal/terraform.(*NodeValidatableResource).Execute(0x140006ac640, {0x106e4f2c0, 0x140009a0620}, 0x4)
+	github.com/hashicorp/terraform/internal/terraform/node_resource_validate.go:41 +0x38
+github.com/hashicorp/terraform/internal/terraform.(*ContextGraphWalker).Execute(0x140007eeb60, {0x106e4f2c0, 0x140009a0620}, {0x12fb3ca58, 0x140006ac640})
+	github.com/hashicorp/terraform/internal/terraform/graph_walk_context.go:129 +0x9c
+github.com/hashicorp/terraform/internal/terraform.(*Graph).walk.func1({0x106cfd140, 0x140006ac640})
+	github.com/hashicorp/terraform/internal/terraform/graph.go:59 +0x228
+github.com/hashicorp/terraform/internal/dag.(*Walker).walkVertex(0x140007ed140, {0x106cfd140, 0x140006ac640}, 0x14000843340)
+	github.com/hashicorp/terraform/internal/dag/walk.go:381 +0x31c
+created by github.com/hashicorp/terraform/internal/dag.(*Walker).Update
+	github.com/hashicorp/terraform/internal/dag/walk.go:304 +0xe0c
+panic: Request cancelled: The plugin.(*GRPCProvider).GetProviderSchema request was cancelled.
+
+goroutine 64 [running]:
+github.com/hashicorp/terraform/internal/plugin.(*GRPCProvider).getSchema(0x14000998580)
+	github.com/hashicorp/terraform/internal/plugin/grpc_provider.go:83 +0x234
+github.com/hashicorp/terraform/internal/plugin.(*GRPCProvider).getResourceSchema(0x14000998580, {0x140000c42e8, 0x14})
+	github.com/hashicorp/terraform/internal/plugin/grpc_provider.go:92 +0x28
+github.com/hashicorp/terraform/internal/plugin.(*GRPCProvider).ValidateResourceConfig(0x14000998580, {{0x140000c42e8, 0x14}, {{{0x106def858, 0x1400065cc10}}, {0x106a284c0, 0x140006cf650}}})
+	github.com/hashicorp/terraform/internal/plugin/grpc_provider.go:204 +0x70
+github.com/hashicorp/terraform/internal/terraform.(*NodeValidatableResource).validateResource(0x140006ac648, {0x106e4f2c0, 0x140009a0620})
+	github.com/hashicorp/terraform/internal/terraform/node_resource_validate.go:397 +0x15ac
+github.com/hashicorp/terraform/internal/terraform.(*NodeValidatableResource).Execute(0x140006ac648, {0x106e4f2c0, 0x140009a0620}, 0x4)
+	github.com/hashicorp/terraform/internal/terraform/node_resource_validate.go:41 +0x38
+github.com/hashicorp/terraform/internal/terraform.(*ContextGraphWalker).Execute(0x140007eeb60, {0x106e4f2c0, 0x140009a0620}, {0x12fb3ca58, 0x140006ac648})
+	github.com/hashicorp/terraform/internal/terraform/graph_walk_context.go:129 +0x9c
+github.com/hashicorp/terraform/internal/terraform.(*Graph).walk.func1({0x106cfd140, 0x140006ac648})
+	github.com/hashicorp/terraform/internal/terraform/graph.go:59 +0x228
+github.com/hashicorp/terraform/internal/dag.(*Walker).walkVertex(0x140007ed140, {0x106cfd140, 0x140006ac648}, 0x140008432c0)
+	github.com/hashicorp/terraform/internal/dag/walk.go:381 +0x31c
+created by github.com/hashicorp/terraform/internal/dag.(*Walker).Update
+	github.com/hashicorp/terraform/internal/dag/walk.go:304 +0xe0c
