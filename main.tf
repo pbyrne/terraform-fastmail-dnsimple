@@ -64,3 +64,10 @@ resource "dnsimple_zone_record" "dkim-3" {
   value     = "fm3.${var.apex}.dkim.fmhosted.com"
   type      = "CNAME"
 }
+
+resource "dnsimple_zone_record" "dkim-4" {
+  zone_name = var.apex
+  name      = "fm4._domainkey"
+  value     = "fm4.${var.apex}.dkim.fmhosted.com"
+  type      = "CNAME"
+}
