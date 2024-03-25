@@ -3,7 +3,7 @@
 
 provider "registry.terraform.io/dnsimple/dnsimple" {
   version     = "1.5.0"
-  constraints = ">= 0.9.0"
+  constraints = ">= 1.5.0"
   hashes = [
     "h1:0MRrmtqKQlpFHRzrtvqalbxCWWCf+S4dqYGnN5qJUZE=",
     "zh:1e2f64e7a5e7eeaff595372e31007f43475c889f29cdf47995ebb22bc74022f1",
